@@ -1,0 +1,16 @@
+
+<table>
+    <label>Ad : </label>
+    <input type="text" [(ngModel)]="modelAd" #ad (keyup.enter)="ekle(ad.value,soyad.value)" />&nbsp;
+    <label>Soyad : </label>
+    <input type="text" [(ngModel)]="modelSoyad" #soyad (keyup.enter)="ekle(ad.value,soyad.value)" />&nbsp;
+    <button class="btn btn-success" [disabled]="!modelAd||!modelSoyad" (click)="ekle(ad.value,soyad.value)">Ekle</button>
+</table>
+
+<ul>
+    <li *ngFor="let veri of veriler; let i=index">
+        <button (click)="sil(i)" class="btn btn-danger">Kayıt Sil</button>
+        <b>Ad:</b>{{veri.ad}}
+        <b>Soyad:</b>{{veri.soyad}}
+    </li>
+</ul>
