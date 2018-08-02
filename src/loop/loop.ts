@@ -34,7 +34,7 @@ export class loop {
 
     ekle(ad, soyad) {
         if (ad == "" || soyad == "") {
-            alert("Gerekli Alanları Doldurunuz!");
+            alert("Gerekli Alanları Doldurunuz!!");
         }
         else {
             alert("Eklendi")
